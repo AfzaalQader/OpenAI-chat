@@ -11,6 +11,20 @@ export async function sendMessage(message, conversationId) {
     }),
   });
 
+  return handleResponse(response);
+}
+
+export async function listConversations() {
+  const response = await fetch(`${API_BASE}/conversations/`);
+  return handleResponse(response);
+}
+
+export async function getConversation(id) {
+  const response = await fetch(`${API_BASE}/conversations/${id}/`);
+  return handleResponse(response);
+}
+
+async function handleResponse(response) {
   if (!response.ok) {
     let detail = `Request failed (${response.status})`;
     try {
