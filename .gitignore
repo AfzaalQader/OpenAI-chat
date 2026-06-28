@@ -1,0 +1,27 @@
+# ---- Python / Django (backend) ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.Python
+venv/
+.venv/
+env/
+db.sqlite3
+db.sqlite3-journal
+*.log
+staticfiles/
+
+# ---- Node / Vite (frontend) ----
+node_modules/
+dist/
+.vite/
+
+# ---- Environment / secrets ----
+.env
+.env.local
+.env.*.local
+
+# ---- OS / editor ----
+.DS_Store
+.idea/
+.vscode/
